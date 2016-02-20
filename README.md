@@ -107,6 +107,18 @@ More details about each of these overrides are below in the [overrides](#overrid
 
 **Recommendation:** Add a `layouts/partials/bio.html` file to your site that tells your readers about you.
 
+#### Creating a Link Post
+
+Sometimes you want a post that just links to another website. This can be done by including the `externalurl` parameter on your individual post. For example, on a post talking about some kickstarter project, you can add this to your individual post's Front Matter:
+
+```
+externalurl = "http://kickstarter.com"
+```
+
+These posts are rendered slightly different with an → to signify that it is remote.
+
+![External URL](_meta/linkpost.png)
+
 ### Variables
 
 | Variable | What value? | Required |
