@@ -1,0 +1,21 @@
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+  <main class="content">
+    <article class="post">
+      <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      <div class="postmeta">
+        {{ with .Params.location }}Photos taken in {{ . }} on {{ end }}
+        <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ with .Params.camera }} with {{ . }}{{ end }}
+      </div>
+
+      <p>
+        {{ .Content }}
+      </p>
+    </article>
+  </main>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}

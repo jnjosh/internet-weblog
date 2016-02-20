@@ -1,0 +1,11 @@
+<script type="text/javascript">
+
+  // @summary: jquery implementation
+  $(function() {
+    // @summary: Use the author's flickr ID to load images from the public flickr feed
+    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id={{ .Site.Author.FlickrID }}&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>

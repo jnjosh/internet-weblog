@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <h1><a href="/">@{{ .Site.Author.Handle }}</a>’s {{ .Site.Title }}.</h1>
+    <div class="menu">
+      {{ $.Scratch.Add "sections" .Site.Params.RSSSections }}
+      <ul>
+        {{ range .Site.Menus.main }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ if in ($.Scratch.Get "sections") .Name }}
+                <a href="{{ .URL }}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
+              {{ end }}
+            </li>
+        {{ end }}
+        {{ with .Site.Author.AboutPage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>

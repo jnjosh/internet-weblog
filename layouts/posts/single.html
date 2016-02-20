@@ -1,0 +1,30 @@
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+  <main class="content">
+
+    <article class="post">
+      {{ if (not (isset .Params "externalurl")) }}
+        <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ else }}
+        <h2><a rel="remote-article" href="{{ .Params.externalurl }}">→ {{ .Title }}</a> <a href="{{ .Permalink }}">∞</a></h2>
+      {{ end }}
+
+      <div class="postmeta">Posted on <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2, 2006" }}</time> in
+        <span class="categories">
+          {{ range $i, $v := .Params.categories }}
+            <a class="category" href="/categories/{{ $v | urlize }}">{{ $v }}</a>{{ if ne (len $.Params.categories) (add $i 1) }}, {{ end }}
+          {{ end }}
+        </span>
+      </div>
+
+      <p>
+        {{ .Content }}
+      </p>
+    </article>
+
+
+  </main>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}
