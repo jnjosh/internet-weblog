@@ -35,6 +35,10 @@ There are a few concepts this theme employs to make a personal blog. It's import
 
 ```
   $ hugo new posts/my-new-post.md
+
+  $ hugo new microposts/quick-thought.md
+  
+  $ hugo new photos/my-nyc-vacation.md
 ```
 
 It also assumes you want to display links to your sections of content (`posts`, `microposts`, `photos`) and display links to other pages in the menu and requires some setup on your part. This guide will take you through the steps to configure your blog to use the theme.
