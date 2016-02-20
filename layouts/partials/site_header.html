@@ -9,7 +9,7 @@
     {{ .Hugo.Generator }}
 
     {{ $.Scratch.Add "title" .Site.Title }}
-    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}{{ .Site.Title }}</title>
+    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Author.Handle }}’s {{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/weblog.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/lightgallery.min.css" type="text/css" />
