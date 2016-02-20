@@ -4,15 +4,20 @@
 
 The theme features a customizable bio-section and flickr-based photo stream in it's footer, unique layouts for displaying all posts sorted by year, and support for partials to customize style and javascript loaded.
 
-![internet-weblog showing a Micropost.](_meta/sample.png)
-
 To see more, [check out my blog which is rendered with this theme](http://jnjosh.com) and see it's [configuration on Github](https://github.com/jnjosh/jnjosh.com).
+
+![internet-weblog showing a Micropost.](_meta/sample.png)
 
 ## Contents
 
 - [Installation](#installation)
 - [Getting started](#getting-started)
     - [Configuring Your Blog](#configuring-your-blog)
+        - [Where Should Blog Post Markdown Files be Stored?](#where-should-blog-post-markdown-files-be-stored)
+        - [How to Configure the Menu in the Blog's Navigation](#how-to-configure-the-menu-in-the-blogs-navigation)
+        - [Defining Yourself as the Author](#defining-yourself-as-the-author)
+        - [Customizing the Bio Section, 404 Page, Javascript, or Stylesheets](#customizing-the-bio-section-404-page-javascript-or-stylesheets)
+        - [Creating a Link Post](#creating-a-link-post)
     - [Variables](#variables)
     - [Overrides](#overrides)
 - [Contributing](#contributing)
@@ -31,13 +36,13 @@ For more information read the official [setup guide](//gohugo.io/overview/instal
 
 ## Getting Started
 
-There are a few concepts this theme employs to make a personal blog. It's important to read this as you may not see what you expect upon launching. Since this theme is built to be a personal blog it opts for some simplifications like using the ["Section Menu for the Lazy Blogger"](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) option in Hugo for displaying a simple menu. It assumes you want to call your blog posts `posts` and organizes them as such. For example, creating a new post with Hugo would require you typing:
+There are a few concepts this theme employs to make a personal blog. It's important to read this as you may not see what you expect upon launching. Since this theme is built to be a personal blog it opts for some simplifications like using the ["Section Menu for the Lazy Blogger"](https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger) option in Hugo for displaying a simple menu. It assumes you want to call your blog posts `posts` and organizes them as such. For example, creating a new post (or micropost, or photopost) with Hugo would require you typing:
 
 ```
   $ hugo new posts/my-new-post.md
 
   $ hugo new microposts/quick-thought.md
-  
+
   $ hugo new photos/my-nyc-vacation.md
 ```
 
@@ -113,7 +118,7 @@ More details about each of these overrides are below in the [overrides](#overrid
 
 #### Creating a Link Post
 
-Sometimes you want a post that just links to another website. This can be done by including the `externalurl` parameter on your individual post. For example, on a post talking about some kickstarter project, you can add this to your individual post's Front Matter:
+Sometimes you want a post that just links to another website. This can be done by including the `externalurl` parameter on your individual post. A link post is just a normal post under `posts` that has this special parameter. For example, on a post talking about some kickstarter project, you can add this to your individual post's Front Matter:
 
 ```
 externalurl = "http://kickstarter.com"
