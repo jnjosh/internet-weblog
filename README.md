@@ -1,6 +1,6 @@
 # internet-weblog Theme for Hugo
 
-`internet-weblog` is a minimalistic Hugo theme that offers a traditional blog mixed with a microblog and a photoblog. It also offers the ability to do simple link posts that link to a remote page. It was ported from a theme made for Octopress.
+`internet-weblog` is a minimalistic (and a bit responsive) Hugo theme that offers a traditional blog mixed with a microblog and a photoblog. It also offers the ability to do simple link posts that link to a remote page. It was ported from a theme made for Octopress.
 
 The theme features a customizable bio-section and flickr-based photo stream in it's footer, unique layouts for displaying all posts sorted by year, and support for partials to customize style and javascript loaded.
 
