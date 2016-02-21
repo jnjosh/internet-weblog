@@ -19,6 +19,27 @@ h1, h2, h3, h4 {
   color: #666666;
 }
 
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  background-color: #F0F2F5;
+  color: #999999;
+  padding: 5px;
+}
+
+blockquote p {
+  font-style: italic;
+  padding: 0 10px;
+}
+
+blockquote p:last-child {
+  font-style: normal;
+  padding-left: 30px;
+
+}
+
 .site {
   display: flex;
   min-height: 100vh;
