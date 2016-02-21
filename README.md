@@ -21,6 +21,7 @@ To see more, [check out my blog which is rendered with this theme](http://jnjosh
     - [Variables](#variables)
     - [Overrides](#overrides)
 - [Contributing](#contributing)
+- [3rd Party Libraries](#3rd-party-libraries)
 - [License](#license)
 - [Contact](#contact)
 
@@ -209,6 +210,13 @@ The theme expects you to override a few files in your blog to finalize the custo
 ## Contributing
 
 Did you find a bug or have an ideas for new features? Feel free to use the issue tracker to let me know or make a pull request.
+
+
+## 3rd Party Libraries
+
+This theme makes use of the following 3rd Party Libraries.
+
+- [lightGallery v1.2.14](http://sachinchoolur.github.io/lightGallery/) - Used in page footer to provide a gallery to view photos in the photo stream.
 
 ## License
 
