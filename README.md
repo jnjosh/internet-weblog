@@ -6,7 +6,7 @@ The theme features a customizable bio-section and flickr-based photo stream in i
 
 To see more, [check out my blog which is rendered with this theme](http://jnjosh.com) and see it's [configuration on Github](https://github.com/jnjosh/jnjosh.com).
 
-![internet-weblog showing a Micropost.](_meta/sample.png)
+![internet-weblog showing a Micropost.](images/sample.png)
 
 ## Contents
 
@@ -55,7 +55,7 @@ It also assumes you want to display links to your sections of content (`posts`, 
 
 The theme works with other content types, but posts work best when grouped under `posts`. When using the `posts` (_note that it is plural_) content type you'll have a customized list page sorted by year and the default list page. Here's an example:
 
-![Custom List Page sorted by Year](_meta/posts.png)
+![Custom List Page sorted by Year](images/posts.png)
 
 **Recommendation:** Organize your blog posts under the `posts` directory.
 
@@ -127,7 +127,7 @@ externalurl = "http://kickstarter.com"
 
 These posts are rendered slightly different with an → to signify that it is remote.
 
-![External URL](_meta/linkpost.png)
+![External URL](images/linkpost.png)
 
 ### Variables
 
@@ -145,7 +145,7 @@ These posts are rendered slightly different with an → to signify that it is re
 | `[params]` - `Description` | `Describe your site` | No. If set this is added to your pages metadata. |
 | `[params]` - `ShowCopyright` | `true` or `false` | No. If true, Copyright text will be added to the footer. |
 | `[params]` - `RSSEnabled` | `true` or `false` | No. If true, RSS pages will be generated. |
-| `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, Yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](_meta/rss.png) |
+| `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, Yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](images/rss.png) |
 
 Here is an example `config.toml`:
 
