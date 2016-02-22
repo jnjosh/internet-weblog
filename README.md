@@ -6,7 +6,7 @@ The theme features a customizable bio-section and flickr-based photo stream in i
 
 To see more, [check out my blog which is rendered with this theme](http://jnjosh.com) and see it's [configuration on Github](https://github.com/jnjosh/jnjosh.com).
 
-![internet-weblog showing a Micropost.](images/sample.png)
+![internet-weblog showing a Micropost.](images/screenshot.png)
 
 ## Contents
 
