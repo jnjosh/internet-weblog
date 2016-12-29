@@ -6,11 +6,13 @@
           {{ partial "bio.html" . }}
         </p>
       </div>
+      {{ if isset .Site.Author "flickrid" | and ( not ( eq .Site.Author.flickrid "" ) ) }}
       <div>
           <h3><a href="https://www.flickr.com/photos/{{ .Site.Author.flickrid }}/">Photo Stream</a></h3>
           <div id="photos"></div>
         </div>
       </div>
+      {{ end }}
   </div>
 
   {{ if .Site.Params.showcopyright }}
