@@ -1,22 +1,22 @@
 <footer>
   <div class="footer_text">
       <div>
-        <h3>Hi, <a href="{{ .Site.Author.AboutPage }}">I'm {{ .Site.Author.FirstName }}</a></h3>
+        <h3>Hi, <a href="{{ .Site.Author.aboutpage }}">I'm {{ .Site.Author.firstname }}</a></h3>
         <p>
           {{ partial "bio.html" . }}
         </p>
       </div>
       <div>
-          <h3><a href="https://www.flickr.com/photos/{{ .Site.Author.FlickrID }}/">Photo Stream</a></h3>
+          <h3><a href="https://www.flickr.com/photos/{{ .Site.Author.flickrid }}/">Photo Stream</a></h3>
           <div id="photos"></div>
         </div>
       </div>
   </div>
 
-  {{ if .Site.Params.ShowCopyright }}
+  {{ if .Site.Params.showcopyright }}
     <div class="footer_copyright">
-      &copy; {{ .Now.Format "2006" }} <a href="{{ .Site.Author.AboutPage }}">{{ .Site.Author.FirstName }} {{ .Site.Author.LastName }}</a>
-      {{ with .Site.Author.Location }} - Made in {{ . }}{{ end }}
+      &copy; {{ .Now.Format "2006" }} <a href="{{ .Site.Author.aboutpage }}">{{ .Site.Author.firstname }} {{ .Site.Author.lastname }}</a>
+      {{ with .Site.Author.location }} - Made in {{ . }}{{ end }}
     </div>
   {{ end }}
 </footer>

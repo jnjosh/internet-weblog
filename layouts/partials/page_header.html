@@ -1,8 +1,8 @@
 <header>
   <nav>
-    <h1><a href="/">@{{ .Site.Author.Handle }}</a>’s {{ .Site.Title }}.</h1>
+    <h1><a href="/">@{{ .Site.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
     <div class="menu">
-      {{ $.Scratch.Add "sections" .Site.Params.RSSSections }}
+      {{ $.Scratch.Add "sections" .Site.Params.rsssections }}
       <ul>
         {{ range .Site.Menus.main }}
             <li>
@@ -12,7 +12,7 @@
               {{ end }}
             </li>
         {{ end }}
-        {{ with .Site.Author.AboutPage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+        {{ with .Site.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
       </ul>
     </div>
   </nav>
