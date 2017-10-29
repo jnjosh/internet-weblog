@@ -68,6 +68,12 @@ header h1 {
   color: #5B636E;
 }
 
+article > ul > li {
+  font-size: 18px;
+  line-height: 28px;
+  color: #5B636E;
+}
+
 /* Navigation */
 
 nav {
