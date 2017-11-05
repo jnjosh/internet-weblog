@@ -1,3 +1,4 @@
 +++
-date = ""
+title = "{{ .Date }}"
+date = "{{ .Date }}"
 +++
