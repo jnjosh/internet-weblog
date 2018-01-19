@@ -1,0 +1,25 @@
+<main class="content">
+  <article class="post-groups">
+    <div class="post-group">
+    {{ range .Data.Pages.GroupByDate "2006" }}
+      <div class="post-group-item">
+        <h3>{{ .Key }}</h3>
+        <ul>
+          {{ range .Pages }}
+            <li>
+              {{ if (not (isset .Params "externalurl")) }}
+                <a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a>
+                on <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2" }}</time>
+              {{ else }}
+                <a rel="remote-article" href="{{ .Params.externalurl }}">{{ .Title }} →</a>
+                on
+                <a href="{{ .Permalink }}"> <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2" }}</time> </a>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+    </div>
+  </article>
+</main>

@@ -88,9 +88,9 @@ You can then control the name and weight of these menus in your `config.toml` by
 
 If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/master/config.toml).
 
-**Recommendation:** Add `SectionPagesMenu` to your `config.toml` file.  
-**Recommendation:** Don't set a `menu` in your post's Front Matter unless you want it to display on the navigation.  
-**Recommendation:** Customize the menus that get an RSS icon by adding the `RSSSections` parameter to your `config.toml` file.  
+**Recommendation:** Add `SectionPagesMenu` to your `config.toml` file.
+**Recommendation:** Don't set a `menu` in your post's Front Matter unless you want it to display on the navigation.
+**Recommendation:** Customize the menus that get an RSS icon by adding the `RSSSections` parameter to your `config.toml` file.
 **Recommendation:** Configure the menu items by adding `menu.main` sections to your `config.toml` file.
 
 #### Defining yourself as the Author
@@ -141,11 +141,12 @@ These posts are rendered slightly different with an → to signify that it is re
 | `[author]` - `LastName` | Your last name | Not really. It is used in some places to identify you as the author. |
 | `[author]` - `AboutPage` | `/about` or `http://about.othersite.com` | Only if you want an about page. This is exposed to allow you to link to an external about page as well. If you have a local page it can just be something relative. |
 | `[author]` - `Location` | `Your City` | No. If set, this is added to the Copyright in the footer so you can give some love to your hometown. |
-| `[author]` - `FlickrID` | `Your Flickr ID` | Kind of. The footer shows your photo stream from flickr. If you don't set it you'll see random photos that Flickr serves you. |
-| `[params]` - `Description` | `Describe your site` | No. If set this is added to your pages metadata. |
+| `[author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
+| `[params]` - `Description` | `Describe your site` | No. If set, this is added to your pages metadata. |
 | `[params]` - `ShowCopyright` | `true` or `false` | No. If true, Copyright text will be added to the footer. |
 | `[params]` - `RSSEnabled` | `true` or `false` | No. If true, RSS pages will be generated. |
-| `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, Yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
+| `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
+| `[params]` - `YearlyMicroposts` | `true` or `false` | No. If true, Microposts will have a page with a yearly grouping just like the posts.  If not present or false, nothing happens. |
 
 Here is an example `config.toml`:
 
