@@ -3,11 +3,11 @@
 
 {{ if isset .Site.Params "yearlymicroposts" | and ( .Site.Params.yearlymicroposts ) }}
 
-{{ partial "yearly_grouping.html" . }}
+  {{ partial "yearly_grouping.html" . }}
 
 {{ else }}
 
-{{ partial "default_list.html" . }}
+  {{ partial "default_list.html" . }}
 
 {{ end }}
 

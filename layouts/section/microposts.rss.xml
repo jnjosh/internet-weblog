@@ -1,0 +1,27 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+
+    <title>@{{ .Site.Author.handle }}’s {{ .Site.Title }}{{ with .Title }} - {{ . }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>All entries {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
+    {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
+    {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <atom:link href="{{.URL}}" rel="self" type="application/rss+xml" />
+    {{ range .Data.Pages }}
+      {{ if ne .Type "page" }}
+      <item>
+      	{{ if (not (isset .Site.Params "rssmicroposttitles" )) | or (eq .Site.Params.rssmicroposttitles true )}}
+          <title>{{ .Title }}</title>
+        {{ end }}
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        <author>{{ with .Site.Author.email }}{{.}}{{end}} ({{ with .Site.Author.firstname }}{{.}}{{ end }} {{ with .Site.Author.lastname }}{{.}}{{end}})</author>
+        <guid>{{ .Permalink }}</guid>
+        <description>{{ .Content | html }}</description>
+      </item>
+      {{ end }}
+    {{ end }}
+  </channel>
+</rss>
