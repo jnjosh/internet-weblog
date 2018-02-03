@@ -2,11 +2,11 @@ name = "Internet Weblog"
 license = "MIT"
 licenselink = "https://github.com/jnjosh/internet-weblog/blob/master/LICENSE.md"
 description = "A personal, minimal blog theme for Hugo."
-homepage = "http://jnjosh.com"
+homepage = "https://jnjosh.com"
 tags = ["blog", "personal", "minimal", "microblog", "photoblog", "linkblog", "responsive"]
 features = ["Microblog", "Photoblog", "Blog", "Flickr Photo Stream", "Personal Blog", "Link Blog", "Responsive"]
 min_version = 0.14
 
 [author]
   name = "Josh Johnson"
-  homepage = "http://jnjosh.com"
+  homepage = "https://jnjosh.com"
