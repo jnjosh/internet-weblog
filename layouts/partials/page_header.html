@@ -2,6 +2,8 @@
   <nav>
     <h1><a href="/">@{{ .Site.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
     <div class="menu">
+    {{ if isset .Site.Params "rsssections" }}
+
       {{ $.Scratch.Add "sections" .Site.Params.rsssections }}
       <ul>
         {{ range .Site.Menus.main }}
@@ -14,6 +16,8 @@
         {{ end }}
         {{ with .Site.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
       </ul>
+    
+      {{ end }}
     </div>
   </nav>
 </header>
