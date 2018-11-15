@@ -148,7 +148,7 @@ These posts are rendered slightly different with an → to signify that it is re
 | `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
 | `[params]` - `RSSMicropostTitles` | `true` or `false` | No. If false, Microposts RSS feeds will not have the title in included posts. If not present or true, nothing happens. |
 | `[params]` - `YearlyMicroposts` | `true` or `false` | No. If true, Microposts will have a page with a yearly grouping just like the posts.  If not present or false, the default of not having a micropost yearly grouping is applied. |
-| `[params]` - `SummarizeMicroposts` | `true` or `false` | No. If true, Microposts will have a page with a yearly grouping just like the posts.  If not present or false, the default of not summarizing micropost is applied. |
+| `[params]` - `SummarizeMicroposts` | `true` or `false` | No. If true, Microposts will be summarized in the main list just like posts with a continue reading link.  If not present or false, the default of not summarizing microposts is applied. |
 
 Here is an example `config.toml`:
 
