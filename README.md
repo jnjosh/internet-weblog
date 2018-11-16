@@ -73,17 +73,17 @@ You can control which menu items get an RSS icon and link by adding the `RSSSect
 
 ```
 [params]
-	RSSSections = [ "Posts", "Microposts", "Photos" ]
+   RSSSections = [ "Posts", "Microposts", "Photos" ]
 ```
 
 You can then control the name and weight of these menus in your `config.toml` by adding a section for each menu item you'd like to display:
 
 ```
 [[menu.main]]
-  name = "Posts"
-  weight = 1
-	identifier = "posts"
-  url = "/posts/"
+   name = "Posts"
+   weight = 1
+   identifier = "posts"
+   url = "/posts/"
 ```
 
 If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/master/config.toml).
@@ -99,12 +99,12 @@ It looks like most themes use the `author` variable to add something simple like
 
 ```
 [author]
-	Handle = "<Your `handle`>"
-	FirstName = "<Your First Name>"
-	LastName = "<Your Last Name>"
-	AboutPage = "<The relative or complete link to your about page>"
-	Location = "<Your Location>"
-	FlickrID = "<Your Flickr ID>"
+   Handle = "<Your `handle`>"
+   FirstName = "<Your First Name>"
+   LastName = "<Your Last Name>"
+   AboutPage = "<The relative or complete link to your about page>"
+   Location = "<Your Location>"
+   FlickrID = "<Your Flickr ID>"
 ```
 
 **Recommendation:** Don't use the `author` variable, use the above `[author]` section in your `config.toml`.
@@ -147,7 +147,8 @@ These posts are rendered slightly different with an → to signify that it is re
 | `[params]` - `RSSEnabled` | `true` or `false` | No. If true, RSS pages will be generated. |
 | `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
 | `[params]` - `RSSMicropostTitles` | `true` or `false` | No. If false, Microposts RSS feeds will not have the title in included posts. If not present or true, nothing happens. |
-| `[params]` - `YearlyMicroposts` | `true` or `false` | No. If true, Microposts will have a page with a yearly grouping just like the posts.  If not present or false, nothing happens. |
+| `[params]` - `YearlyMicroposts` | `true` or `false` | No. If true, Microposts will have a page with a yearly grouping just like the posts.  If not present or false, the default of not having a micropost yearly grouping is applied. |
+| `[params]` - `SummarizeMicroposts` | `true` or `false` | No. If true, Microposts will be summarized in the main list just like posts with a continue reading link.  If not present or false, the default of not summarizing microposts is applied. |
 
 Here is an example `config.toml`:
 
@@ -160,41 +161,41 @@ Paginate = 10
 SectionPagesMenu = "main"
 
 [author]
-	Handle = "jnjosh"
-	FirstName = "Josh"
-	LastName = "Johnson"
-	AboutPage = "/about"
-	Location = "Durham, NC"
-	FlickrID = "87151163@N00"
+   Handle = "jnjosh"
+   FirstName = "Josh"
+   LastName = "Johnson"
+   AboutPage = "/about"
+   Location = "Durham, NC"
+   FlickrID = "87151163@N00"
 
 [params]
-	Description = "This is my blog, read it and enjoy."
-	ShowCopyright = true
-	RSSEnabled = true
-	RSSSections = [ "Posts", "Microposts", "Photos" ]
+   Description = "This is my blog, read it and enjoy."
+   ShowCopyright = true
+   RSSEnabled = true
+   RSSSections = [ "Posts", "Microposts", "Photos" ]
 
 [taxonomies]
-	tag = "tags"
-	category = "categories"
-	series = "series"
+   tag = "tags"
+   category = "categories"
+   series = "series"
 
 [[menu.main]]
-  name = "Posts"
-  weight = 1
-	identifier = "posts"
-  url = "/posts/"
+   name = "Posts"
+   weight = 1
+   identifier = "posts"
+   url = "/posts/"
 
 [[menu.main]]
-	name = "Microposts"
-	weight = 2
-	identifier = "microposts"
-	url = "/microposts/"
+   name = "Microposts"
+   weight = 2
+   identifier = "microposts"
+   url = "/microposts/"
 
 [[menu.main]]
-	name = "Photos"
-	weight = 3
-	identifier = "photos"
-	url = "/photos/"
+   name = "Photos"
+   weight = 3
+   identifier = "photos"
+   url = "/photos/"
 ```
 
 ### Overrides
