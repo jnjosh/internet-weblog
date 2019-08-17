@@ -1,4 +1,10 @@
-{{ $paginator := .Paginate (where .Data.Pages "Type" "!=" "page") }}
+
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = .Site.RegularPages }}
+{{ end }}
+{{ $paginator := .Paginate $pages }}
+
 {{ range .Paginator.Pages }}
   {{ $url := replace .Permalink .Site.BaseURL "" }}
 

@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ with .Site.Author.firstname }}{{ . }}{{ end }} {{ with .Site.Author.lastname }}{{ . }}{{ end }}">
     <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
 
     {{ $.Scratch.Add "title" .Site.Title }}
     <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Author.handle }}’s {{ .Site.Title }}</title>
 
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/weblog.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
     {{ partial "custom_stylesheets.html" . }}
 
     {{ if .Site.Params.rssenabled }}
-	<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{.Site.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
   </head>
   <body class="site">
