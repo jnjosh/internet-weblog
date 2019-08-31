@@ -7,9 +7,9 @@
 			<ul>
 				{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
+					<a href="{{.Permalink}}">{{ .Name }}</a>
 					{{ if in ($.Scratch.Get "sections") .Name }}
-						<a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
+						<a href="{{.Permalink}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
 					{{ end }}
 				</li>
 				{{ end }}
