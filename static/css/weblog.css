@@ -54,7 +54,7 @@ blockquote p:last-child {
 /* Header */
 
 header {
-  padding: 40px 0 0 0;
+  padding: 20px 0;
 }
 
 header h1 {
@@ -88,14 +88,13 @@ nav ul {
 }
 
 nav ul > li {
-  background-color: #fafafa;
   display: inline;
   float: left;
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 9pt;
-  font-weight: normal;
+  font-size: 11pt;
+  font-weight: 500;
 }
 
 .rss-icon {
@@ -114,11 +113,16 @@ nav ul > li {
 
 /* Articles */
 
+article.micropost {
+  margin: 8px auto;
+}
+
 .micropost {
-  background-color: #F0F2F5;
+  background-color: #f8f8f8;
   margin: 40px auto;
-  padding: 10px;
+  padding: 20px;
   max-width: 780px;
+  border-radius: 14px;
 }
 
 .post, .page, .post-groups {
@@ -126,7 +130,15 @@ nav ul > li {
   max-width: 780px;
 }
 
-.micropost > p, .post > p, .page > p {
+.micropost > p {
+  color: #606060;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 10px;
+  text-align: justify;
+}
+
+.post > p, .page > p {
   color: #666666;
   font-size: 18px;
   line-height: 28px;
@@ -364,5 +376,14 @@ and (max-width: 780px) {
 
   .post-group-item {
     width: 100%;
+  }
+
+  article.micropost {
+    margin: 8px 20px;
+  }
+
+  .micropost {
+    margin: 0px auto;
+    padding: 20px;
   }
 }
