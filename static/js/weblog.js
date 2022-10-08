@@ -9,8 +9,8 @@ iweblog.application = function() {
 			if (cnt == count) return;
 
 			var image = item.media.m;
-      var smallImage = image.replace("_m.jpg", "_s.jpg");
-      var largeImage = image.replace("_m.jpg", ".jpg");
+      		var smallImage = image.replace("_m.jpg", "_s.jpg");
+      		var largeImage = image.replace("_m.jpg", "_b.jpg");
 			htmlString += "<a class=\"photo-item\" href=\"" + largeImage + "\">";
 			htmlString += "<img src=\"" + smallImage + "\" />";
 			htmlString += "</a>";
