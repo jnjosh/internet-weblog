@@ -1,5 +1,7 @@
 <main class="content">
+  
   <article class="post-groups">
+    {{ .Content }}
     <div class="post-group">
     {{ range .Pages.GroupByDate "2006" }}
       <div class="post-group-item">

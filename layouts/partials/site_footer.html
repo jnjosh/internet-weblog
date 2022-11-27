@@ -1,8 +1,5 @@
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
-    <script src="/js/weblog.js" charset="utf-8"></script>
-    {{ partial "custom_javascript.html" . }}
-    {{ partial "custom_image_handler.html" . }}
-    {{ template "_internal/google_analytics.html" . }}
+    {{ partial "custom_javascript.html" . -}}
+    {{ partial "custom_image_handler.html" . -}}
+    {{ template "_internal/google_analytics.html" . -}}
   </body>
 </html>
