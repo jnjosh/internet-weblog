@@ -51,7 +51,7 @@ blockquote p:last-child {
   flex: 1;
 }
 
-div .highlight {
+div.highlight {
   overflow: auto;
 }
 /* Header */
