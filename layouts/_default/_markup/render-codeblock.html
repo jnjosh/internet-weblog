@@ -2,11 +2,18 @@
     file            : The code file to display
     downloadAs      : The name that the file should be given on download
     allowdownload   : True if a download link should be shown 
+    fileLines       : Range. Starting line, optional ending line (or eof by default) string "linenumber" / "linenumber-linenumber"
     TODO: fix options. If the lineos start is changed, the highlight lines are not matched to the line numbers
 */ -}}
-{{ $filePath:= "" }}
-{{- $data:= .Inner  -}}
-{{- if .Attributes.file  -}}
+{{- $filePath:= "" -}}
+{{- $adjustedOptions:= .Options -}}
+{{- $startIndex:= 0 -}}
+{{- $prefaceLen:= 0 -}}
+{{- if .Inner -}}
+{{-   $prefaceLen = ((split .Inner "\n") | len) -}}
+{{- end -}}
+{{- $data:= .Inner -}}  
+{{- if .Attributes.file -}}
 {{-   $filePath = .Attributes.file -}} 
 {{-   $matchedFile := .Page.Resources.GetMatch $filePath -}}
 {{-   if and (not $matchedFile) .Page.File -}}
@@ -15,17 +22,41 @@
 {{-   else -}}
 {{-     $data = $matchedFile.Content -}}
 {{-   end -}}
-{{- $data = printf "%s\n%s" .Inner $data -}}
+{{-   if .Attributes.filelines -}}
+{{-     $datalines :=  split $data "\n" -}}
+{{-     $values:= split .Attributes.filelines "-" -}}
+{{-     $start:=  (int (index $values 0)) -}}
+{{-     $startIndex = sub $start 1 -}}
+{{-     $end:= ($datalines | len) -}}
+{{-     if gt ($values | len) 1 -}}
+{{-       $end = int (index $values 1) -}}
+{{-     end -}}
+{{-     $data = delimit (first  (sub  $end  $startIndex) (after   $startIndex  $datalines)) "\n" -}}
+{{-     $adjustedOptions = merge $adjustedOptions (dict "linenostart" (sub $start $prefaceLen)) -}}
+{{-   end -}}
+{{-   if ne $prefaceLen 0 -}}
+{{-     $data = printf "%s\n%s" .Inner $data -}}
+{{-   end -}}
 {{- end -}}
-{{- $class := .Attributes.class | default ""     -}}
-{{- $lang  := .Attributes.lang  | default .Type  -}}
-{{- if transform.CanHighlight $lang  -}}
-    <div class="{{-  $class  -}}">
-{{-   highlight $data $lang .Options -}}
-    </div>
+{{- $adjusted_hl_lines:= "" -}}
+{{- $highlightLineShift:= sub ( add $prefaceLen 1 ) $startIndex -}}
+{{- if $adjustedOptions.hl_lines -}}
+{{-   $sep:= "" -}}
+{{-   range  $adjustedOptions.hl_lines -}} 
+{{-     $adjusted_hl_lines = printf "%s%s%d-%d"  $adjusted_hl_lines $sep (add (index . 0) $highlightLineShift) (add (index . 1) $highlightLineShift) -}}
+{{-     $sep = " " -}}
+{{-   end -}}
+{{- end -}}
+{{- $adjustedOptions = merge $adjustedOptions (dict "hl_lines" $adjusted_hl_lines) -}}
+{{- $class := .Attributes.class | default "" -}}
+{{- $lang  := .Attributes.lang  | default .Type -}}
+{{- if transform.CanHighlight $lang -}}
+  <div class="{{- $class -}}">
+{{-   highlight $data $lang $adjustedOptions -}}
+  </div>
 {{- else -}}
-    <pre><code class="{{-  $class  -}}">{{- $data -}}</code></pre>
+  <pre><code class="{{- $class -}}">{{- $data -}}</code></pre>
 {{- end -}}
-{{- if and .Attributes.file (eq .Attributes.allowdownload true)  -}}
-<a href="/{{ $filePath }}" download="{{- cond (ne .Attributes.downloadas nil) .Attributes.downloadas .Attributes.file -}}">Download file</a>
+{{- if and .Attributes.file (eq .Attributes.allowdownload true) -}}
+<a href="/{{- $filePath -}}" download="{{- cond (ne .Attributes.downloadas nil) .Attributes.downloadas .Attributes.file -}}">Download file</a>
 {{- end -}}
