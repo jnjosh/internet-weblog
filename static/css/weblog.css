@@ -51,9 +51,6 @@ blockquote p:last-child {
   flex: 1;
 }
 
-div.highlight {
-  overflow: auto;
-}
 /* Header */
 
 header {
@@ -388,5 +385,9 @@ and (max-width: 780px) {
   .micropost {
     margin: 0px auto;
     padding: 20px;
+  }
+
+  div.highlight {
+    overflow: auto;
   }
 }
