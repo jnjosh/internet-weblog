@@ -1,6 +1,6 @@
 {{- /* 
     file            : The code file to display
-    filename        : The name that the file should be given on download
+    downloadAs      : The name that the file should be given on download
     allowdownload   : True if a download link should be shown 
     TODO: fix options. If the lineos start is changed, the highlight lines are not matched to the line numbers
 */ -}}
@@ -27,5 +27,5 @@
     <pre><code class="{{-  $class  -}}">{{- $data -}}</code></pre>
 {{- end -}}
 {{- if and .Attributes.file (eq .Attributes.allowdownload true)  -}}
-<a href="/{{ $filePath }}" download="{{- cond (ne .Attributes.filename nil) .Attributes.filename .Attributes.file -}}">Download file</a>
+<a href="/{{ $filePath }}" download="{{- cond (ne .Attributes.downloadas nil) .Attributes.downloadas .Attributes.file -}}">Download file</a>
 {{- end -}}
