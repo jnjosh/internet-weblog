@@ -123,7 +123,7 @@ article.micropost {
 	background-color: #f8f8f8;
 	margin: 40px auto;
 	padding: 20px;
-	max-width: 780px;
+	max-width: 1020px;
 	border-radius: 14px;
 }
 
@@ -131,7 +131,7 @@ article.micropost {
 .page,
 .post-groups {
 	margin: 40px auto;
-	max-width: 780px;
+	max-width: 1020px;
 }
 
 .micropost>p {
@@ -174,7 +174,7 @@ article.micropost {
 article.photo {
 	border-radius: 5px;
 	margin: 40px auto;
-	max-width: 780px;
+	max-width: 1020px;
 	overflow: hidden;
 	height: 300px;
 }
@@ -335,7 +335,7 @@ footer {
 	padding: 3px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1020px) {
 
 	.footer_text {
 		width: 100%;
