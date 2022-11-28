@@ -390,4 +390,9 @@ and (max-width: 780px) {
   div.highlight {
     overflow: auto;
   }
+
+  .image-caption img {
+		border: 1px solid #656C77;
+		padding: 3px;
+	}
 }
