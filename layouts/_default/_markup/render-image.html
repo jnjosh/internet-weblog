@@ -1,3 +1,4 @@
+<figure class="image-caption">
 {{- if .Destination }} 
 {{-   $img := .Page.Resources.GetMatch .Destination -}}
 {{-   if and (not $img) .Page.File -}}
@@ -9,17 +10,15 @@
 {{-  $large := $img -}}
 {{-  $medium := $large.Fill "726x402" -}}
 {{-  $small := $medium.Fill "458x254" -}}
-<figure class="image-caption">
     <img alt="{{ $.Text }}" srcset="
         {{ $small.RelPermalink }} 458w,
         {{ $medium.RelPermalink }} 726w,
         {{ $large.RelPermalink }} 1200w" sizes="80vw" src="{{ $small.RelPermalink }}" />
     <figcaption>{{ with $.Title | safeHTML }}{{ . }}{{ end }}</figcaption>
-</figure>
 {{-   else -}}
-<img src="{{ .Destination | safeURL }}" alt="{{ $.Text }}" />{{- end -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ $.Text }}"/>{{- end -}}
+    <figcaption>{{ with $.Title | safeHTML }}{{ . }}{{ end }}</figcaption>
 {{- else -}}
-<figure class="image-caption">
     <figcaption>TODO: Grab image '{{ $.Text }}'</figcaption>
-</figure>
 {{- end -}}
+</figure>
