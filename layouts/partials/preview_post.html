@@ -1,33 +1,40 @@
 <article class="post">
-	{{ if (not (isset .Params "externalurl")) }}
-	  <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
-	{{ else }}
-	  <h2><a rel="remote-article" href="{{ .Params.externalurl }}">→ {{ .Title }}</a> <a href="{{ .Permalink }}">∞</a></h2>
+	{{ if (not (isset .Params "externalurl")) -}}
+	<h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	{{- else -}}
+	<h2><a rel="remote-article" href="{{ .Params.externalurl }}">→ {{ .Title }}</a> <a href="{{ .Permalink }}">∞</a>
+	</h2>
 	{{ end }}
- 
-	<div class="postmeta">Posted on <time datetime="{{ .PublishDate }}" pubdate="">{{ .Date.Format "January 2, 2006" }}</time>
-		{{ with .Params.Categories }}
+	<div class="postmeta">Posted on <time datetime="{{ .PublishDate }}" pubdate="">{{ .Date.Format "January 2, 2006"
+			}}</time>
+		{{ with .Params.Categories -}}
 		in
-		 <span class="categories">
+		<span class="categories">
 			{{ range $i, $v := . }}
-			  <a class="category" href="/categories/{{ $v | urlize }}">{{ $v }}</a>{{ if ne (len $.Params.Categories) (add $i 1) }}, {{ end }}
-			{{ end }}
-		 </span>
-	  {{ end }}
+			<a class="category" href="/categories/{{ $v | urlize }}">{{ $v }}</a>{{ if ne (len $.Params.Categories) (add
+			$i 1) }}, {{ end }}
+			{{ end -}}
+		</span>
+		{{ end -}}
+		{{ with .Translations -}}
+		<span class="translations">
+			also in
+			{{ range . -}}
+			<a class="translation" href="{{ .Permalink }}">{{ .Lang }}</a>
+			{{ end -}}
+		</span>
+		{{ end -}}
 	</div>
- 
 	<p>
-	  {{ if (not (isset .Params "externalurl")) }}
-		 {{ .Summary }}
-	  {{ else }}
-		 {{ .Content }}
-	  {{ end }}
+		{{ if (not (isset .Params "externalurl")) -}}
+		{{ .Summary }}
+		{{- else -}}
+		{{ .Content }}
+		{{- end }}
 	</p>
- 
 	{{ if .Truncated }}
-	  {{ if (not (isset .Params "externalurl")) }}
-		 <a class="continue" rel="full-article" href="{{ .Permalink }}">Continue Reading »</a>
-	  {{ end }}
+	{{ if (not (isset .Params "externalurl")) }}
+	<a class="continue" rel="full-article" href="{{ .Permalink }}">Continue Reading »</a>
 	{{ end }}
- </article>
- 
+{{- end -}}
+</article>
