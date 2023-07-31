@@ -7,7 +7,7 @@
 
       <div class="postmeta">
         {{ with .Params.location }}Photos taken in {{ . }} on {{ end }}
-        <time datetime="{{ .Date }}" pubdate="">{{ .Date.Format "January 2, 2006" }}</time>
+        <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate="">{{ .Date.Format "January 2, 2006" }}</time>
         {{ with .Params.camera }} with {{ . }}{{ end }}
       </div>
 
