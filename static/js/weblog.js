@@ -17,7 +17,7 @@ iweblog.application = function() {
 			cnt++;
 		});
 
-    $('#photos').html(htmlString);
+    	$('#photos').html(htmlString);
 		$('#photos').lightGallery();
 	}
 

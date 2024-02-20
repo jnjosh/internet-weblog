@@ -129,6 +129,14 @@ These posts are rendered slightly different with an → to signify that it is re
 
 ![External URL](https://github.com/jnjosh/internet-weblog/raw/master/images/linkpost.png)
 
+#### Specifying a featured image for social media
+
+Sometimes you want to feature an image as your featured image that will display when linking your post in social media. This can be done by including the `feature` parameter on your individual post. Note you don't need to put the URL, just the path to the image without a leading `/`
+
+```
+feature: "assets/posts/20240219/image.jpg"
+```
+
 ### Variables
 
 | Variable | What value? | Required |
