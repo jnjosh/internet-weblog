@@ -6,7 +6,7 @@ The theme features a customizable bio-section and flickr-based photo stream in i
 
 To see more, [check out my blog which is rendered with this theme](http://jnjosh.com) and see it's [configuration on Github](https://github.com/jnjosh/jnjosh.com).
 
-![internet-weblog showing a Micropost.](https://github.com/jnjosh/internet-weblog/blob/master/images/screenshot.png)
+![internet-weblog showing a Micropost.](https://github.com/jnjosh/internet-weblog/blob/main/images/screenshot.png)
 
 ## Contents
 
@@ -55,7 +55,7 @@ It also assumes you want to display links to your sections of content (`posts`, 
 
 The theme works with other content types, but posts work best when grouped under `posts`. When using the `posts` (_note that it is plural_) content type you'll have a customized list page sorted by year and the default list page. Here's an example:
 
-![Custom List Page sorted by Year](https://github.com/jnjosh/internet-weblog/raw/master/images/posts.png)
+![Custom List Page sorted by Year](https://github.com/jnjosh/internet-weblog/raw/main/images/posts.png)
 
 **Recommendation:** Organize your blog posts under the `posts` directory.
 
@@ -86,7 +86,7 @@ You can then control the name and weight of these menus in your `config.toml` by
    url = "/posts/"
 ```
 
-If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/master/config.toml).
+If you aren't sure of how this should look, see how [jnjosh.com uses this in it's config.toml](https://github.com/jnjosh/jnjosh.com/blob/main/config.toml).
 
 **Recommendation:** Add `SectionPagesMenu` to your `config.toml` file.
 **Recommendation:** Don't set a `menu` in your post's Front Matter unless you want it to display on the navigation.
@@ -127,7 +127,7 @@ externalurl = "http://kickstarter.com"
 
 These posts are rendered slightly different with an → to signify that it is remote.
 
-![External URL](https://github.com/jnjosh/internet-weblog/raw/master/images/linkpost.png)
+![External URL](https://github.com/jnjosh/internet-weblog/raw/main/images/linkpost.png)
 
 #### Specifying a featured image for social media
 
