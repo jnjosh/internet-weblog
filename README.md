@@ -18,6 +18,8 @@ To see more, [check out my blog which is rendered with this theme](http://jnjosh
         - [Defining Yourself as the Author](#defining-yourself-as-the-author)
         - [Customizing the Bio Section, 404 Page, Javascript, or Stylesheets](#customizing-the-bio-section-404-page-javascript-or-stylesheets)
         - [Creating a Link Post](#creating-a-link-post)
+        - [Specifying a Featured Image for Social Media](#specifying-a-featured-image-for-social-media)
+        - [Preferred Dark Appearance](#preferred-dark-appearance)
     - [Variables](#variables)
     - [Overrides](#overrides)
 - [Contributing](#contributing)
@@ -137,6 +139,10 @@ Sometimes you want to feature an image as your featured image that will display 
 feature: "assets/posts/20240219/image.jpg"
 ```
 
+#### Preferred Dark Appearance
+
+If you want to enable a dark appearance, there is limited support for that. Currently, setting the `EnablePreferredDarkAppearance` param to true in your config.toml file will enable it in an automatic state—if the system is using dark mode.
+
 ### Variables
 
 | Variable | What value? | Required |
@@ -152,6 +158,7 @@ feature: "assets/posts/20240219/image.jpg"
 | `[author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
 | `[params]` - `Description` | `Describe your site` | No. If set, this is added to your pages metadata. |
 | `[params]` - `ShowCopyright` | `true` or `false` | No. If true, Copyright text will be added to the footer. |
+| `[params]` - `EnablePreferredDarkAppearance` | `true` or `false` | No. If true, The viewers system dark mode is respected switching to a dark appearance. |
 | `[params]` - `RSSEnabled` | `true` or `false` | No. If true, RSS pages will be generated. |
 | `[params]` - `RSSSections` | `[ "Posts", "Microposts", "Photos" ]` | If you want RSS links in the menu, yes. These strings need to be the display name of the section where you want to have an RSS icon displayed. ![rss](https://github.com/jnjosh/internet-weblog/blob/master/images/rss.png) |
 | `[params]` - `RSSMicropostTitles` | `true` or `false` | No. If false, Microposts RSS feeds will not have the title in included posts. If not present or true, nothing happens. |

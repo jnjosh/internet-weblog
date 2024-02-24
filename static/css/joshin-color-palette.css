@@ -1,0 +1,30 @@
+:root {
+    /* Common Colors */
+    --joshin-color-white: #ffffff;
+    --joshin-color-black: #000000;
+
+    /* Greys */
+    --joshin-color-grey-100:  hsl(0, 0%, 98.82%);
+    --joshin-color-grey-200:  hsl(0, 0%, 90.59%);
+    --joshin-color-grey-300:  hsl(0, 0%, 81.96%);
+    --joshin-color-grey-400:  hsl(0, 0%, 74.12%);
+    --joshin-color-grey-500:  hsl(0, 0%, 65.88%);
+    --joshin-color-grey-600:  hsl(0, 0%, 58.43%);
+    --joshin-color-grey-700:  hsl(0, 0%, 50.59%);
+    --joshin-color-grey-800:  hsl(0, 0%, 43.14%);
+    --joshin-color-grey-900:  hsl(0, 0%, 36.08%);
+    --joshin-color-grey-1000: hsl(0, 0%, 29.02%);
+    --joshin-color-grey-1100: hsl(0, 0%, 22.35%);
+    --joshin-color-grey-1200: hsl(0, 0%, 16.08%);
+            
+    /* Denim */
+    --joshin-color-denim-100: #E1EFF8;
+    --joshin-color-denim-200: #C5DEF2;
+    --joshin-color-denim-300: #9DBCDA;
+    --joshin-color-denim-400: #7694B6;
+    --joshin-color-denim-500: #476286;
+    --joshin-color-denim-600: #334C73;
+    --joshin-color-denim-700: #233860;
+    --joshin-color-denim-800: #16274D;
+    --joshin-color-denim-900: #0D1A40;
+}

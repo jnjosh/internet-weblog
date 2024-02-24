@@ -1,0 +1,26 @@
+/* Light Color Appearance */
+:root {
+    /* semantic colors */
+    --joshin-accent-color-100: var(--joshin-color-denim-500);
+
+    --joshin-primary-color-100: var(--joshin-color-grey-200);
+    --joshin-primary-color-200: var(--joshin-color-grey-400);
+    --joshin-primary-color-300: var(--joshin-color-grey-500);
+    --joshin-primary-color-400: var(--joshin-color-grey-600);
+    --joshin-primary-color-500: var(--joshin-color-grey-800);
+    --joshin-primary-color-600: var(--joshin-color-grey-900);
+    --joshin-primary-color-700: var(--joshin-color-grey-1000);
+    --joshin-primary-color-800: var(--joshin-color-grey-1100);
+    --joshin-primary-color-900: var(--joshin-color-grey-1200);
+
+    /* elevations */
+    --joshin-elevation-0: var(--joshin-color-grey-100);
+    --joshin-elevation-1: var(--joshin-color-grey-200);
+    --joshin-elevation-2: var(--joshin-color-grey-500);
+    --joshin-elevation-3: var(--joshin-color-grey-900);
+    --joshin-elevation-4: var(--joshin-color-grey-1200);
+
+    /* components */
+    /* link */ 
+    --joshin-component-link-color-default: var(--joshin-accent-color-100);
+}    
