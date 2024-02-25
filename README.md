@@ -246,7 +246,7 @@ This theme is released under MIT. For more information, please see the [License]
 
 This is the first theme I've made for Hugo, so I'm sure I've done some things wrong or assumed too much. If you have ideas or things that should be fixed, please let me know.
 
-- [Josh Johnson](http://jnjosh.com) [@jnjosh](http://twitter.com/jnjosh)
+- [Josh Johnson](http://jnjosh.com) [@jnjosh](https://mastodon.social/@jnjosh)
 
 ---
 
