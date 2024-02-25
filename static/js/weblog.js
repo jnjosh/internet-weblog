@@ -13,7 +13,7 @@ iweblog.application = function() {
       		var smallImage = image.replace("_m.jpg", "_s.jpg");
       		var largeImage = image.replace("_m.jpg", "_b.jpg");
 			htmlString += "<a data-lightbox=\"lightbox\" data-title=\"" + title + "\" class=\"photo-item\" href=\"" + largeImage + "\">";
-			htmlString += "<img src=\"" + smallImage + "\" />";
+			htmlString += "<img loading=\"lazy\" src=\"" + smallImage + "\" />";
 			htmlString += "</a>";
 			cnt++;
 		});
