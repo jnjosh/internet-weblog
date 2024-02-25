@@ -234,7 +234,9 @@ Did you find a bug or have an ideas for new features? Feel free to use the issue
 
 This theme makes use of the following 3rd Party Libraries.
 
-- [lightGallery v1.2.14](http://sachinchoolur.github.io/lightGallery/) - Used in page footer to provide a gallery to view photos in the photo stream.
+- Image Gallery in Footer
+   - [jQuery 3.7.1](https://jquery.com)
+   - [lightbox2 2.11.4](https://lokeshdhakar.com/projects/lightbox2/)
 
 ## License
 

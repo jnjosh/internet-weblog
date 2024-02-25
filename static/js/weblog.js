@@ -8,20 +8,26 @@ iweblog.application = function() {
 		$.each(data.items, function(i,item){
 			if (cnt == count) return;
 
+			var title = item.title;
 			var image = item.media.m;
       		var smallImage = image.replace("_m.jpg", "_s.jpg");
       		var largeImage = image.replace("_m.jpg", "_b.jpg");
-			htmlString += "<a class=\"photo-item\" href=\"" + largeImage + "\">";
+			htmlString += "<a data-lightbox=\"lightbox\" data-title=\"" + title + "\" class=\"photo-item\" href=\"" + largeImage + "\">";
 			htmlString += "<img src=\"" + smallImage + "\" />";
 			htmlString += "</a>";
 			cnt++;
 		});
 
     	$('#photos').html(htmlString);
-		$('#photos').lightGallery();
 	}
 
 	return {
 		displayImages: function(data, count) { _display_images(data, count); }
 	}
 }();
+
+/// configure lightbox
+lightbox.option({
+	'resizeDuration': 400,
+	'wrapAround': true
+})
