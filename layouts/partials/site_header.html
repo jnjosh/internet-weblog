@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="{{ with .Site.Author.firstname }}{{ . }}{{ end }} {{ with .Site.Author.lastname }}{{ . }}{{ end }}">
+    <meta name="author" content="{{ with .Site.Params.Author.firstname }}{{ . }}{{ end }} {{ with .Site.Params.Author.lastname }}{{ . }}{{ end }}">
     <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
 
     {{ $siteTitle := .Site.Title }} {{ $title := $siteTitle }}{{ if .IsPage }}{{ $title = .Title }}
@@ -13,12 +13,12 @@
     {{ if .Param "feature" }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.feature }}">{{ end }}
     <meta property="og:url" content="{{ .Page.Permalink }}">
     <meta property="og:description" content="{{ .Summary }}">
-    <meta property="og:site_name" content="@{{ .Site.Author.handle }}’s {{ .Site.Title }}">
+    <meta property="og:site_name" content="@{{ .Site.Params.Author.handle }}’s {{ .Site.Title }}">
     <meta name="twitter:card" content="summary_large_image">
     {{ end }}
     {{ hugo.Generator }}
     {{ $.Scratch.Add "title" .Site.Title }}
-    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Author.handle }}’s {{ .Site.Title }}</title>
+    <title>{{ with .Title }}{{ if ne . ($.Scratch.Get "title") }}{{ . }} &middot; {{ end }}{{ end }}@{{ .Site.Params.Author.handle }}’s {{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/joshin-color-palette.css" media="screen" charset="utf-8" />
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/joshin-color-light.css" media="screen" charset="utf-8" />

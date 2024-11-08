@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <h1><a href="/">@{{ .Site.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
+    <h1><a href="/">@{{ .Site.Params.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
     <div class="menu">
 		{{ if isset .Site.Params "rsssections" }}
 			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
@@ -13,7 +13,7 @@
 					{{ end }}
 				</li>
 				{{ end }}
-				{{ with .Site.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
 			</ul>
 		{{ else }}
 			<ul>
@@ -22,7 +22,7 @@
 					<a href="{{.URL}}">{{ .Name }}</a>
 				</li>
 				{{ end }}
-				{{ with .Site.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
 			</ul>
       	{{ end }}
     </div>
