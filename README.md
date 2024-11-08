@@ -97,10 +97,10 @@ If you aren't sure of how this should look, see how [jnjosh.com uses this in it'
 
 #### Defining yourself as the Author
 
-It looks like most themes use the `author` variable to add something simple like your name. This theme uses more structured data about you and requires an `[author]` section. The details of what is affected by each property is defined below in the variables section, but you should add this section to your `config.toml`:
+It looks like most themes use the `author` variable to add something simple like your name. This theme uses more structured data about you and requires an `[params.author]` section. The details of what is affected by each property is defined below in the variables section, but you should add this section to your `config.toml`:
 
 ```
-[author]
+[params.author]
    Handle = "<Your `handle`>"
    FirstName = "<Your First Name>"
    LastName = "<Your Last Name>"
@@ -109,7 +109,7 @@ It looks like most themes use the `author` variable to add something simple like
    FlickrID = "<Your Flickr ID>"
 ```
 
-**Recommendation:** Don't use the `author` variable, use the above `[author]` section in your `config.toml`.
+**Recommendation:** Don't use the `author` variable, use the above `[params.author]` section in your `config.toml`.
 
 #### Customizing the Bio Section, 404 page, javascript, or stylesheets
 
@@ -150,12 +150,12 @@ If you want to enable a dark appearance, there is limited support for that. Curr
 | `theme`  | `internet-weblog` | Only if you want to use this theme! 😃|
 | `title` | `internet weblog` | No. Unless you want to call your blog something else. |
 | `SectionPagesMenu` | `main` | Yes. See [above](#configuring-your-blog). |
-| `[author]` - `Handle` | A short handle to describe you. This could be your twitter handle or simply your first name. | Yes. This is used to generate the Site's Title. |
-| `[author]` - `FirstName` | Your first name | Yes. This is used in the footer to say Hi and in other places to identify you as the author. |
-| `[author]` - `LastName` | Your last name | Not really. It is used in some places to identify you as the author. |
-| `[author]` - `AboutPage` | `/about` or `http://about.othersite.com` | Only if you want an about page. This is exposed to allow you to link to an external about page as well. If you have a local page it can just be something relative. |
-| `[author]` - `Location` | `Your City` | No. If set, this is added to the Copyright in the footer so you can give some love to your hometown. |
-| `[author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
+| `[params.author]` - `Handle` | A short handle to describe you. This could be your twitter handle or simply your first name. | Yes. This is used to generate the Site's Title. |
+| `[params.author]` - `FirstName` | Your first name | Yes. This is used in the footer to say Hi and in other places to identify you as the author. |
+| `[params.author]` - `LastName` | Your last name | Not really. It is used in some places to identify you as the author. |
+| `[params.author]` - `AboutPage` | `/about` or `http://about.othersite.com` | Only if you want an about page. This is exposed to allow you to link to an external about page as well. If you have a local page it can just be something relative. |
+| `[params.author]` - `Location` | `Your City` | No. If set, this is added to the Copyright in the footer so you can give some love to your hometown. |
+| `[params.author]` - `FlickrID` | `Your Flickr ID` | No. The footer shows your photo stream from flickr. If you don't set it, nothing will be displayed. |
 | `[params]` - `Description` | `Describe your site` | No. If set, this is added to your pages metadata. |
 | `[params]` - `ShowCopyright` | `true` or `false` | No. If true, Copyright text will be added to the footer. |
 | `[params]` - `EnablePreferredDarkAppearance` | `true` or `false` | No. If true, The viewers system dark mode is respected switching to a dark appearance. |
@@ -175,7 +175,7 @@ theme = "internet-weblog"
 Paginate = 10
 SectionPagesMenu = "main"
 
-[author]
+[params.author]
    Handle = "jnjosh"
    FirstName = "Josh"
    LastName = "Johnson"
